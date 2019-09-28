@@ -26,6 +26,7 @@ public class CardPartCollectionView : UIView, CardPartView, UICollectionViewDele
     public init(collectionViewLayout: UICollectionViewLayout? = nil) {
 
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout ?? UICollectionViewLayout())
+        ///
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.isScrollEnabled = true
 
@@ -41,10 +42,12 @@ public class CardPartCollectionView : UIView, CardPartView, UICollectionViewDele
         fatalError("init(coder:) has not been implemented")
     }
 
+    ///固有尺寸
     override public var intrinsicContentSize: CGSize {
         return CGSize(width: UIView.noIntrinsicMetric, height: collectionView.frame.height)
     }
 
+    ///更新约束
     override public func updateConstraints() {
 
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[collectionView]|", options: [], metrics: nil, views: ["collectionView" : collectionView]))

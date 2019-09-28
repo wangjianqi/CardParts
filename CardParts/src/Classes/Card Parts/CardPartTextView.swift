@@ -164,7 +164,7 @@ public class CardPartTextView : UIView, CardPartView {
 	}
 	
     @objc func updateText() {
-		
+		///不是主线程
         if Thread.current != .main {
             self.performSelector(onMainThread: #selector(CardPartTextView.updateText), with: nil, waitUntilDone: false)
             return

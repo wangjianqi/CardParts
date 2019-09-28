@@ -13,7 +13,7 @@ import RxCocoa
 public class CardPartImageView : UIImageView, CardPartView {
 	
 	public var margins: UIEdgeInsets = CardParts.theme.cardPartMargins
-	
+	///设置image
 	public var imageName: String? {
 		didSet {
 			guard let name = imageName else { return }

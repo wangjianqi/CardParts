@@ -20,6 +20,9 @@ public class CardPartVerticalSeparatorView : UIView, CardPartView {
 		
 		backgroundColor = CardParts.theme.separatorColor
 		
+        /// item:
+        /// attribute:属性
+        /// 
 		let separatorWidthConstraint = NSLayoutConstraint(item: self,attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 0.5);
 		
 		self.addConstraint(separatorWidthConstraint)

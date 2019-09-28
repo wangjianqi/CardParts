@@ -38,7 +38,7 @@ open class CardCell : UICollectionViewCell {
         
         contentView.addSubview(cardContentView)
         contentView.backgroundColor = UIColor.white
-        
+        ///添加约束
         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[cardContentView]|",
                                                                   options: [],
                                                                   metrics: nil,

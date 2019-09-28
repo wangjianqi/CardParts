@@ -21,7 +21,7 @@ public class CardPartCenteredView: UIView, CardPartView {
         self.addSubview(leftView.view)
         self.addSubview(rightView.view)
         self.addSubview(centeredView.view)
-        
+        ///约束
         let constraints = [
             // centered view constraints
             NSLayoutConstraint(item: centeredView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0),
